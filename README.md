@@ -20,7 +20,7 @@ HTML/CSS: The frontend interface is built using HTML and styled with CSS to crea
 Clone the repository: git clone https://github.com/aryan138/Multi-predictor.git
 Install dependencies: pip install -r requirements.txt
 Run the Flask application: python app.py
-Access the application in your web browser at http://localhost:5000
+Access the application in your web browser at http://localhost:7000
 
 ## Contributing:
 Contributions to Multipredictor are welcome! Whether it's adding new features, fixing bugs, or improving documentation, your contributions help make this project better for everyone. Feel free to open an issue or submit a pull request to contribute.
