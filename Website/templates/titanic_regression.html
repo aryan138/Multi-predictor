@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Regression Model</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;color: gold;">Titanic - Regression Model</h1>
+                <br>
+                <p>This page contains the machine learning model for predicting ticket fare on the Titanic.</p>
+                <br>
+                <h2 style="color: gold;">Model Description</h2>
+                <br>
+                <p>The regression model uses a <b>Linear Regression</b> algorithm to predict ticket fare based on various passenger attributes.</p>
+                <p>The features used for prediction include passenger class, age, number of siblings/spouses aboard, number of parents/children aboard, and embarked port.</p>
+                <br><br>
+                <h2 style="color: gold;">Get Prediction</h2>
+                <br>
+                <form action="{{ url_for("get_valu")}}" method="post">
+                    <label for="pclass">Passenger Class:</label>
+                    <input type="text" id="pclass" name="pclass" required><br><br>
+                    
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" required><br><br>
+                    
+                    <label for="sibsp">Number of Siblings/Spouses Aboard:</label>
+                    <input type="text" id="sibsp" name="sibsp" required><br><br>
+                    
+                    <label for="parch">Number of Parents/Children Aboard:</label>
+                    <input type="text" id="parch" name="parch" required><br><br>
+                    
+                    <label for="embarked">Embarked Port (C/Q/S):</label>
+                    <input type="text" id="embarked" name="embarked" required><br><br>
+                    
+                    <button type="submit">Get Prediction</button>
+                </form>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

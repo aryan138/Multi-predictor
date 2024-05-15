@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ames Housing Classification Model</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <!-- <form action="{{ url_for("get_value")}}" method="post"></form> -->
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;color: gold;">Ames Housing - Regression Model</h1>
+                <br>
+                <p>This page contains the machine learning model for predicting house prices in the Ames Housing dataset.</p>
+                <br>
+                <h2 style="color: gold;">Model Description</h2>
+                <br>
+                <p>The regression model uses a <b>Linear Regression</b> algorithm to predict house prices based on various features.</p>
+                <p>The features used for prediction include overall quality, living area, garage size, total basement area, and others.</p>
+                <br>
+                <br>
+                <h2 style="color: gold;">Get Prediction</h2>
+                <br>
+                <form action="{{ url_for("get_values")}}" method="post">
+                    <label for="overall_qual">Overall Quality:</label>
+                    <input type="text" id="overall_qual" name="overall_qual" required><br><br>
+                    
+                    <label for="gr_liv_area">Above Grade Living Area (sqft):</label>
+                    <input type="text" id="gr_liv_area" name="gr_liv_area" required><br><br>
+                    
+                    <label for="garage_cars">Garage Cars:</label>
+                    <input type="text" id="garage_cars" name="garage_cars" required><br><br>
+                    
+                    <label for="garage_area">Garage Area (sqft):</label>
+                    <input type="text" id="garage_area" name="garage_area" required><br><br>
+                    
+                    <label for="total_bsmt_sf">Total Basement Area (sqft):</label>
+                    <input type="text" id="total_bsmt_sf" name="total_bsmt_sf" required><br><br>
+                    
+                    <button type="submit">Get Prediction</button>
+                </form>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

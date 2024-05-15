@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ames Housing Dataset</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        /* Additional CSS styles */
+        .sample-data {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: black; /* Change background color to black when hovering */
+            color: white; /* Change text color to white for better readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;color: gold;">About Ames Housing Dataset</h1>
+                <br>
+                <h2 style="color: gold;">Source of the Dataset</h2>
+                <br>
+                <p>The Ames Housing Dataset is sourced from 
+                    <a href="https://www.kaggle.com/datasets/prevek18/ames-housing-dataset" style="color: #ff6600;">Kaggle</a>.</p>
+                <br>
+                <h2 style="color: gold;">Definition of Variables</h2>
+                <br>
+                <ul style="text-align: left;">
+                    <p>Ames Housing dataset is a big dataset consisting of around 81 columns out of which used in this project are as follows:</p>
+                    <br>
+                    <li><strong>Overall Qual:</strong> Overall material and finish quality of the house.</li>
+                    <li><strong>Gr Liv Area:</strong> Above grade (ground) living area square feet.</li>
+                    <li><strong>Garage Area:</strong> Size of garage in square feet.</li>
+                    <li><strong>Total Bsmt SF:</strong> Total square feet of basement area.</li>
+                    <li><strong>1st Flr SF:</strong> First floor square feet.</li>
+                    <li><strong>Year Built:</strong> Original construction date.</li>
+                    <li><strong>Year Remod/Add:</strong> Remodel date (same as construction date if no remodeling or additions).</li>
+                    <li><strong>Full Bath:</strong> Full bathrooms above grade.</li>
+                    <li><strong>TotRms AbvGrd:</strong> Total rooms above grade (does not include bathrooms).</li>
+                    <li><strong>Neighborhood:</strong> Physical locations within Ames city limits.</li>
+                    <li><strong>SalePrice:</strong> Selling price of house</li>
+                </ul>
+                <br>
+                <section class="sample-data">
+                    <h2 style="color: gold;">Sample of the Dataset</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Overall Qual</th>
+                                <th>Gr Liv Area</th>
+                                <th>Garage Cars</th>
+                                <th>Garage Area</th>
+                                <th>Total Bsmt SF</th>
+                                <!-- Add headers for other columns -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in sample_data %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                                <td>{{ row[4] }}</td>
+                                <!-- Add cells for other columns -->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

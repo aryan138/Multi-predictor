@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Titanic Dataset</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        /* Additional CSS styles */
+        .container-main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-div {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: gold;
+        }
+
+        p {
+            color: #f6f5f5;
+        }
+
+        ul {
+            text-align: left;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #ff6600;
+        }
+
+        .sample-data {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: black; /* Change background color to black when hovering */
+            color: white; /* Change text color to white for better readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;">About Titanic Dataset</h1>
+                <br>
+                <h2>Source of the Dataset</h2>
+                <br>
+                <p>The Titanic Dataset is sourced from 
+                    <a href="https://www.kaggle.com/datasets/heptapod/titanic">Kaggle</a>.</p>
+                <br>
+                <h2>Definition of Variables</h2>
+                <br>
+                <ul>
+                    <li><strong>PassengerId:</strong> Unique identifier for each passenger.</li>
+                    <li><strong>Survived:</strong> Did the passenger survive (1) or perish (0)?</li>
+                    <li><strong>Pclass:</strong> Passenger class (1st, 2nd, or 3rd)</li>
+                    <li><strong>Sex:</strong> Passenger's gender (male or female)</li>
+                    <li><strong>Age:</strong> Passenger's age in years</li>
+                    <li><strong>SibSp:</strong> Number of siblings/spouses aboard (excluding spouse)</li>
+                    <li><strong>Parch:</strong> Number of parents/children aboard (excluding spouse)</li>
+                    <li><strong>Ticket:</strong> Unique ticket number</li>
+                    <li><strong>Fare:</strong> Ticket price</li>
+                    <li><strong>Cabin:</strong> Cabin number</li>
+                    <li><strong>Embarked:</strong> Port of embarkation (C, Q, or S)</li>
+                </ul>
+                <br>
+                <section class="sample-data">
+                    <h2>Sample of the Dataset</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PassengerId</th>
+                                <th>Survived</th>
+                                <th>Pclass</th>
+                                <th>Sex</th>
+                                <th>Age</th>
+                                <!-- Add headers for other columns -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in sample_data %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                                <td>{{ row[4] }}</td>
+                                <!-- Add cells for other columns -->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

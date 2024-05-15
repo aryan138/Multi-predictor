@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ames Housing Classification Model</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;color: gold;">Ames Housing Classification Model</h1>
+                <br>
+                <p>This page contains the machine learning model for classifying houses(old or new) in the Ames Housing dataset.</p>
+                <br>
+                <h2 style="color: gold;">Model Description</h2>
+                <br>
+                <p>The classification model uses a <b>Random Forest Classifier</b> algorithm to predict whether a house is old or new based on its features.</p>
+                <p>The features used for classification include overall quality, living area, garage size, total basement area, and others.</p>
+                <br><br>
+                <h2 style="color: gold;">Get Prediction</h2>
+                <br>
+                <form action="{{ url_for("get_val")}}" method="post">
+                    <label for="overall_qual">Overall Quality:</label>
+                    <input type="text" id="overall_qual" name="overall_qual" required><br><br>
+                    
+                    <label for="gr_liv_area">Above Grade Living Area (sqft):</label>
+                    <input type="text" id="gr_liv_area" name="gr_liv_area" required><br><br>
+                    
+                    <label for="garage_cars">Garage Cars:</label>
+                    <input type="text" id="garage_cars" name="garage_cars" required><br><br>
+                    
+                    <label for="garage_area">Garage Area (sqft):</label>
+                    <input type="text" id="garage_area" name="garage_area" required><br><br>
+                    
+                    <label for="total_bsmt_sf">Total Basement Area (sqft):</label>
+                    <input type="text" id="total_bsmt_sf" name="total_bsmt_sf" required><br><br>
+                    
+                    <button type="submit">Get Prediction</button>
+                </form>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

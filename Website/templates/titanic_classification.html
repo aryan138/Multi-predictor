@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ames Housing Classification Model</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-div">
+                <h1 style="font-size: 2em;color: gold;">Titanic - Classification Model</h1>
+                <br>
+                
+                <p>This page contains the machine learning model for predicting survival on the Titanic.</p>
+                <br>
+                <h2 style="color: gold;">Model Description</h2>
+                <br>
+                <p>The classification model uses a <b>Logistic Regression</b> algorithm to predict survival based on various passenger attributes.</p>
+                <p>The features used for prediction include passenger class, sex, age, number of siblings/spouses aboard, number of parents/children aboard, fare, and embarked port.</p>
+                <br>
+                <br>
+                <h2 style="color: gold;">Get Prediction</h2>
+                <br>
+                <form action="{{ url_for("get_value")}}" method="post">
+                    <label for="pclass">Passenger Class:</label>
+                    <input type="text" id="pclass" name="pclass" required><br><br>
+                    
+                    <label for="sex">Sex (male/female):</label>
+                    <input type="text" id="sex" name="sex" required><br><br>
+                    
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" required><br><br>
+                    
+                    <label for="sibsp">Number of Siblings/Spouses Aboard:</label>
+                    <input type="text" id="sibsp" name="sibsp" required><br><br>
+                    
+                    <label for="parch">Number of Parents/Children Aboard:</label>
+                    <input type="text" id="parch" name="parch" required><br><br>
+                    
+                    <label for="fare">Fare:</label>
+                    <input type="text" id="fare" name="fare" required><br><br>
+                    
+                    <label for="embarked">Embarked Port (C/Q/S):</label>
+                    <input type="text" id="embarked" name="embarked" required><br><br>
+                    
+                    <button type="submit">Get Prediction</button>
+                </form>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
